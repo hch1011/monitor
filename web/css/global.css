@@ -1,0 +1,29 @@
+
+body{
+	padding:0px 10px;
+}
+
+.content-wrapper, .main-footer, .main-header{  
+    margin:0px 0px;
+}
+
+.main-header{
+	background-color: rgba(41, 65, 144, 1);color:#fff;
+
+}
+
+.navbar-light .navbar-brand,  
+.navbar-light .navbar-nav .nav-link{
+    color:#fff
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+    color:#ccc
+}
+
+.sidebar{
+	overflow-y: inherit
+}

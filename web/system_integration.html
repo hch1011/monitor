@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+  <title>变电站环境监测系统</title>
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="./css/global.css">
+  <!-- Google Font: Source Sans Pro 
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  -->
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<script>
+	//js通过以下参数来设置菜单高亮
+	var menu0 = "xtjc";//顶部菜单项名称：系统集成
+	var menu1 = "jcym";//页面一级菜单名称：液面监控，没有则不用设置
+	var menu2 = "jcym-dlg";//页面二级菜单名称：电缆沟
+</script>
+
+ <!-- 为了静态import html-->
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-light border-bottom">
+	<a class="navbar-brand mr-0 mr-md-2" href="#" aria-label="Bootstrap"><h1><strong>变电站环境监测系统</strong></h1></a>
+		
+	<ul class="navbar-nav bd-navbar-nav flex-row">
+	 
+		<li class="nav-item"><a class="nav-link menu0 sy" href="#">首页</a></li>
+		<li class="nav-item"><a class="nav-link menu0 xtjc" href="#">系统集成</a></li>
+		<li class="nav-item"><a class="nav-link menu0 bjgl " href="#">报警管理</a></li>
+		<li class="nav-item"><a class="nav-link menu0 sjfx " href="#">数据分析</a></li>
+		<li class="nav-item"><a class="nav-link menu0 czrz " href="#">操作日志</a></li>
+		<li class="nav-item"><a class="nav-link menu0 yhgl " href="#">用户管理</a></li>
+		<li class="nav-item"><a class="nav-link menu0 xtsz " href="#">系统设置</a></li>
+
+		<li class="nav-item dropdown menu0 xlcd active">
+			<a class="nav-item nav-link dropdown-toggle mr-md-2"  aria-expanded="false"
+				aria-haspopup="true" href="#" data-toggle="dropdown">下拉菜单</a>
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+				<a class="dropdown-item" href="#" target="_blank">子菜单</a>
+				<a class="dropdown-item" href="#" target="_blank">子菜单</a>
+			</div>
+		</li>
+	</ul>
+
+	<ul class="navbar-nav flex-row ml-md-auto d-md-flex">
+		<li class="nav-item dropdown">
+			<a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" 
+				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">下拉菜单</a>
+			<div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+				<a class="dropdown-item" href="#">子菜单2</a>
+				<a class="dropdown-item" href="#">子菜单2</a>
+				<a class="dropdown-item" href="#">子菜单2</a>
+				<a class="dropdown-item" href="#">子菜单2</a>
+				<a class="dropdown-item" href="#">子菜单2</a>
+				<a class="dropdown-item" href="#">子菜单2</a>
+				<a class="dropdown-item" href="#">子菜单2</a>
+				<a class="dropdown-item" href="#">子菜单2</a>
+				<a class="dropdown-item" href="#">子菜单2</a>
+				<a class="dropdown-item" href="#">子菜单2</a>
+			</div>
+		</li>
+	  <li class="nav-item">
+		<a class="nav-link"  href="#"><i class="fas fa-expand"></i>全屏</a>
+		<!--
+		<a class="nav-link"  href="#"><i class="fas fa-compress"></i>返回</a>
+		-->
+	  </li>            
+	  <li class="nav-item">
+		<a class="nav-link"  href="#"><i class="fa fa-sign-out-alt"></i>退出</a>
+	  </li>
+
+
+    </ul>
+  </nav>
+  <!-- /.Navbar -->
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Main content -->
+    <div class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-2">
+			<!-- Sidebar -->
+			<div class="sidebar">
+			  <!-- Sidebar Menu -->
+			  <nav class="mt-2">
+				<ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+				  <li class="nav-item has-treeview  menu-open">
+					<a href="#" class="nav-link menu1 jcym active">
+					  <i class="nav-icon fas fa-tachometer-alt"></i>
+					  <p>液面监测<i class="right fas fa-angle-left"></i></p>
+					</a>
+					<ul class="nav nav-treeview">
+					  <li class="nav-item">
+						<a href="#" class="nav-link  menu2 jcym-xfsc" onclick='selecItem("jcym","jcym-xfsc");'> <i class="far fa-circle nav-icon"></i> <p>消防水池</p> </a>
+					  </li>
+					  <li class="nav-item">
+						<a href="#" class="nav-link  menu2 jcym-sgyc" onclick='selecItem("jcym","jcym-sgyc");'> <i class="far fa-circle nav-icon"></i> <p>事故油池</p> </a>
+					  </li>
+					  <li class="nav-item">
+						<a href="#" class="nav-link  menu2 jcym-dlg" onclick='selecItem("jcym","jcym-dlg");'> <i class="far fa-circle nav-icon"></i> <p>电缆沟</p> </a>
+					  </li>
+					  <li class="nav-item">
+						<a href="#" class="nav-link  menu2 jcym-ysj" onclick='selecItem("jcym","jcym-ysj");'> <i class="far fa-circle nav-icon"></i> <p>雨水井</p> </a>
+					  </li>
+					</ul>
+				  </li>
+
+				  <li class="nav-item has-treeview">
+					<a href="#" class="nav-link menu1 wsdjc">
+					  <i class="nav-icon fas fa-tachometer-alt"></i>
+					  <p>温湿度监测<i class="right fas fa-angle-left"></i></p>
+					</a>
+					<ul class="nav nav-treeview">
+					  <li class="nav-item">
+						<a href="#" class="nav-link menu2 wsdjc-f1" onclick='selecItem("wsdjc","wsdjc-f1");'> <i class="far fa-circle nav-icon"></i> <p>1F</p> </a>
+					  </li>
+					  <li class="nav-item">
+						<a href="#" class="nav-link menu2 wsdjc-f2" onclick='selecItem("wsdjc","wsdjc-f2");'> <i class="far fa-circle nav-icon"></i> <p>2F</p> </a>
+					  </li>
+					  <li class="nav-item">
+						<a href="#" class="nav-link menu2 wsdjc-f3"> <i class="far fa-circle nav-icon"></i> <p>3F</p> </a>
+					  </li>
+					  <li class="nav-item">
+						<a href="#" class="nav-link menu2 wsdjc-f4"> <i class="far fa-circle nav-icon"></i> <p>4F</p> </a>
+					  </li>
+					</ul>
+				  </li>
+
+				  <li class="nav-item has-treeview">
+					<a href="#" class="nav-link">
+					  <i class="nav-icon fas fa-tachometer-alt"></i>
+					  <p>空调监测<i class="right fas fa-angle-left"></i></p>
+					</a>
+					<ul class="nav nav-treeview">
+					  <li class="nav-item">
+						<a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>1F</p> </a>
+					  </li>
+					  <li class="nav-item">
+						<a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>2F</p> </a>
+					  </li>
+					</ul>
+				  </li>
+
+				  <li class="nav-item has-treeview">
+					<a href="#" class="nav-link">
+					  <i class="nav-icon fas fa-tachometer-alt"></i>
+					  <p>排风监测<i class="right fas fa-angle-left"></i></p>
+					</a>
+					<ul class="nav nav-treeview">
+					  <li class="nav-item">
+						<a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>1F</p> </a>
+					  </li>
+					  <li class="nav-item">
+						<a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>2F</p> </a>
+					  </li>
+					</ul>
+				  </li>
+
+				  <li class="nav-item has-treeview">
+					<a href="#" class="nav-link">
+					  <i class="nav-icon fas fa-tachometer-alt"></i>
+					  <p>设备声音监测<i class="right fas fa-angle-left"></i></p>
+					</a>
+					<ul class="nav nav-treeview">
+					  <li class="nav-item">
+						<a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>1F</p> </a>
+					  </li>
+					  <li class="nav-item">
+						<a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>2F</p> </a>
+					  </li>
+					</ul>
+				  </li>
+
+				  <li class="nav-item has-treeview">
+					<a href="#" class="nav-link">
+					  <i class="nav-icon fas fa-tachometer-alt"></i>
+					  <p>漏油监测<i class="right fas fa-angle-left"></i></p>
+					</a>
+					<ul class="nav nav-treeview">
+					  <li class="nav-item">
+						<a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>1F</p> </a>
+					  </li>
+					  <li class="nav-item">
+						<a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>2F</p> </a>
+					  </li>
+					</ul>
+				  </li>
+
+				  <li class="nav-item has-treeview">
+					<a href="#" class="nav-link">
+					  <i class="nav-icon fas fa-tachometer-alt"></i>
+					  <p>气象信息<i class="right fas fa-angle-left"></i></p>
+					</a>
+					<ul class="nav nav-treeview">
+					  <li class="nav-item">
+						<a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>天气预报</p> </a>
+					  </li>
+					  <li class="nav-item">
+						<a href="#" class="nav-link"> <i class="far fa-circle nav-icon"></i> <p>天气实测</p> </a>
+					  </li>
+					</ul>
+				  </li>
+
+
+				  <!--menu-open active-->
+				  <!--
+				  <li class="nav-item has-treeview menu-open">
+					<a href="#" class="nav-link active">
+					  <i class="nav-icon fas fa-tachometer-alt"></i><p>子菜单示例<i class="right fas fa-angle-left"></i></p>
+					</a>
+					<ul class="nav nav-treeview">
+					  <li class="nav-item">
+						<a href="#" class="nav-link active"><i class="far fa-circle nav-icon"></i><p>子菜单</p></a>
+					  </li>
+					  <li class="nav-item">
+						<a href="#" class="nav-link"><i class="far fa-circle nav-icon"></i><p>子菜单</p></a>
+					  </li>
+					</ul>
+				  </li>
+				  
+				  <li class="nav-item">
+					<a href="#" class="nav-link"><i class="nav-icon fas fa-th"></i><p>菜单示例<span class="right badge badge-danger">New</span></p></a>
+				  </li>
+				  -->
+				  
+				</ul>
+			  </nav>
+			  <!-- /.sidebar-menu -->
+			</div>
+			<!-- /.sidebar -->
+          </div>
+          <!-- /.col-md-6 -->
+          <div class="col-lg-10">
+		  
+            <div class="card">
+              <div class="card-header">
+                <h5 class="m-0">Featured</h5>
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">Special title treatment</h6>
+
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+			
+
+            <div class="card card-primary card-outline">
+              <div class="card-header">
+                <h5 class="m-0">Featured</h5>
+              </div>
+              <div class="card-body">
+                <h6 class="card-title">Special title treatment</h6>
+
+                <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
+            </div>
+          </div>
+          <!-- /.col-md-6 -->
+        </div>
+        <!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+
+  <!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="float-right d-none d-sm-inline">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2014-2018 <a href="#">Monitor</a>.</strong> All rights reserved.
+  </footer>
+</div>
+<!-- ./wrapper -->
+
+<!-- REQUIRED SCRIPTS -->
+
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<script src="./js/global.js"></script>
+</body>
+</html>
